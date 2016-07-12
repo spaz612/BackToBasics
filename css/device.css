@@ -2,6 +2,7 @@
     width: 160px;
     height: 160px;
     position: relative;
+    background-color: "Red";
 }
 
 .dpad {
@@ -23,25 +24,25 @@
 
 .dpad > .up {
     top: 0;
-    left: 40px;
+    left: 33%;
 }
 
 .dpad > .down {
     bottom: 0;
-    left: 40px;
+    left: 33%;
 }
 
 .dpad > .left {
-    top: 40px;
+    top: 33%;
     left: 0;
 }
 
 .dpad > .right {
-    top: 40px;
+    top: 33%;
     right: 0;
 }
 
 .dpad > .center {
     top: 33%;
-    left: 40px;
+    left: 33%;
 }
