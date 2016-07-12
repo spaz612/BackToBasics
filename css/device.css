@@ -15,11 +15,10 @@
 
 .dpad > .element {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 33%;
+    height: 33%;
     background-color: blue;
     border: 2px solid black;
-    border-top: 1px solid black;
 }
 
 .dpad > .up {
