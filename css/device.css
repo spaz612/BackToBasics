@@ -1,0 +1,47 @@
+.dpad-touch-target {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.dpad {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 124px;
+    height: 124px;
+}
+
+.dpad > .element {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border: 2px solid black;
+    border-top: 1px solid black;
+}
+
+.dpad > .up {
+    top: 0;
+    left: 40px;
+}
+
+.dpad > .down {
+    bottom: 0;
+    left: 40px;
+}
+
+.dpad > .left {
+    top: 40px;
+    left: 0;
+}
+
+.dpad > .right {
+    top: 40px;
+    right: 0;
+}
+
+.dpad > .center {
+    top: 33%;
+    left: 40px;
+}
