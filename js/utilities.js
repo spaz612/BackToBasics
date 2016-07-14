@@ -1,9 +1,9 @@
 function colorGreen(){
-  $(div).css("background-color: green");
+  $(#dpad-touch-target).css("background-color: green");
 }
 
 function colorRed(){
-  $(div).css("background-color: red");
+  $(#dpad-touch-target).css("background-color: red");
 }
 
 $(document).ready(function(){
