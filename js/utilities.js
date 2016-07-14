@@ -3,7 +3,7 @@ function colorGreen(){
 }
 
 function colorRed(){
-  $div).css("background-color: red");
+  $(div).css("background-color: red");
 }
 
 $(document).ready(function(){
