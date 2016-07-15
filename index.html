@@ -6,6 +6,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
+  <!-- iPad Portrait -->
+  <link href="/defaults/apple-touch-startup-image-1536x2008.png"
+        media="(device-width: 768px) and (device-height: 1024px)"
+        rel="apple-touch-startup-image">
+  <!-- iPad Landscape -->
+  <link href="/defaults/apple-touch-startup-image-2048x1496.png"
+        media="(device-width: 1024px) and (device-height: 768px)"
+        rel="apple-touch-startup-image">
+  
+  <link rel="stylesheet" href="css/device.css" type="text/css">
   <Title>Web App</Title>
 </head>
 <body>
@@ -15,5 +25,21 @@
   <div style="background-color: green">
     <p>Hello deployment process!</p>
   </div>
+  <div id="message">Message space</div>
+  <div id="element-dpad">
+    <div id="dpad-touch-target" class="dpad-touch-target">
+      <div id="dpad" class="dpad">
+        <div id="dpad-up" class="element up top arrow"></div>
+        <div id="dpad-left" class="element left middle arrow"></div>
+        <div id="dpad-down" class="element down bottom arrow"></div>
+        <div id="dpad-right" class="element right middle arrow"></div>
+        <div class="element center middle"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  
+  <script type="text/javascript" src="js/utilities.js"></script>
 </body>
 </html>
