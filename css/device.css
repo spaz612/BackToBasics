@@ -1,3 +1,20 @@
+#display {
+    position: relative;
+    margin: auto;
+    width: 320px;
+    height: 288px;
+}
+
+.display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 288px;
+    background-color: #fff;
+    background-size: 320px 288px;
+}
+
 .dpad-touch-target {
     width: 160px;
     height: 160px;
