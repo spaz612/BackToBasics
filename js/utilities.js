@@ -1,4 +1,4 @@
-function timeDrive(step,rpm){
+/*function timeDrive(step,rpm){
   this.step = step;
   this.rpm = rpm;
   this.start = function(){
@@ -20,7 +20,7 @@ function makeToggle(){
     }
   };
   return toggle;
-}
+}*/
 
 function colorGreen(){
   $("#dpad-touch-target").css("background-color", "green");
