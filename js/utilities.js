@@ -6,7 +6,7 @@ function timeDrive(step,rpm){
   };
   this.halt = function(){
     clearInterval(this.context);
-  }
+  };
 }
 
 function makeToggle(){
