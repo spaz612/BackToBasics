@@ -8,7 +8,7 @@ function timeDrive(step,rpm){
     clearInterval(this.context);
   };
 }
-/*
+
 function makeToggle(){
   var count = 0;
   var toggle = function(){
@@ -20,7 +20,7 @@ function makeToggle(){
     }
   };
   return toggle;
-}*/
+}
 
 function colorGreen(target){
   $("#" + target).css("background-color", "green");
