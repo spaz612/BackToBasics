@@ -29,5 +29,5 @@ $(document).ready(function(){
   $(document).keypress(function(event){
      $("#message").text("Does this break?");
   });
-  loadXML();
+//  loadXML();
 });
