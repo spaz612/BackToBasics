@@ -7,7 +7,7 @@ function colorRed(){
 }
 
 function displayKeypress(code){
-  var ctx = $("#monitor").getContext)"2d");
+  var ctx = $("#monitor").getContext("2d");
   ctx.font = "30px Arial";
   ctx.fillText(code,80,60);
 }
