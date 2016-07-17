@@ -24,10 +24,10 @@ function loadXML(){
 }
 
 $(document).ready(function(){
+  loadXML();
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
   $(document).keypress(function(event){
     displayKeypress(event.which);
   });
-  loadXML();
 });
