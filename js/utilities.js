@@ -26,8 +26,8 @@ function loadXML(){
 $(document).ready(function(){
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
-/*  $(document).keypress(function(event){
-    displayKeypress(event.which);
+  $(document).keypress(function(event){
+//    displayKeypress(event.which);
   });
-*/  loadXML();
+  loadXML();
 });
