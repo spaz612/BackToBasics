@@ -6,6 +6,12 @@ function colorRed(){
   $("#dpad-touch-target").css("background-color", "red");
 }
 
+function displayKeypress(e){
+  var ctx = $("#monitor").getContext)"2d");
+  ctx.font = "30px Arial";
+  ctx.fillText(e.which,80,60);
+}
+
 function loadXML(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
@@ -20,5 +26,6 @@ function loadXML(){
 $(document).ready(function(){
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
+  $(document).keypress(displayKeypress);
   loadXML();
 });
