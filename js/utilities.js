@@ -22,12 +22,12 @@ function makeToggle(){
   return toggle;
 }*/
 
-function colorGreen(){
-  $("#dpad-touch-target").css("background-color", "green");
+function colorGreen(target){
+  $("#" + target).css("background-color", "green");
 }
 
 function colorRed(){
-  $("#dpad-touch-target").css("background-color", "red");
+  $("#" + target).css("background-color", "red");
 }
 
 function displayKeypress(code){
@@ -51,8 +51,8 @@ function loadXML(){
 
 $(document).ready(function(){
 //  var drive = new timeDrive(makeToggle(),2);
-  $(document).keydown(colorGreen);
-  $(document).keyup(colorRed);
+  $(document).keydown(colorGreen("dpad-touch-target"));
+  $(document).keyup(colorRed("dpad-touch-target"));
   $(document).keypress(function(event){
      displayKeypress(event.which);
   });
