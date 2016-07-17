@@ -26,7 +26,7 @@ function colorGreen(target){
   $("#" + target).css("background-color", "green");
 }
 
-function colorRed(){
+function colorRed(target){
   $("#" + target).css("background-color", "red");
 }
 
