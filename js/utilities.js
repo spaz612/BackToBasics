@@ -10,11 +10,10 @@ function timeDrive(step,rpm){
 }
 
 function makeToggle(){
-  var count = 0;
+  var green = true;
   var toggle = function(){
-    count++;
-    count %= 2;
-    if (count == 0){
+    green = !green;
+    if (green){
       colorGreen("message");
     } else {
       colorRed("message");
