@@ -12,8 +12,8 @@ function displayKeypress(code){
   var ctx=c.getContext("2d");
   ctx.fillRect(20,20,150,200);
 //  var ctx = $("#monitor").getContext("2d");
-  ctx.font = "30px Arial";
-  ctx.fillText("Code: " + code,80,60);
+//  ctx.font = "30px Arial";
+//  ctx.fillText("Code: " + code,80,60);
 }
 
 function loadXML(){
