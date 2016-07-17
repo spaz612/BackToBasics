@@ -8,7 +8,7 @@ function colorRed(){
 
 function displayKeypress(code){
   $("#message").text("Display: " + code);
-  var c=document.getElementById("monitor");
+  var c=$("#monitor");
   var ctx=c.getContext("2d");
   ctx.fillRect(20,20,150,100);
 //  var ctx = $("#monitor").getContext("2d");
