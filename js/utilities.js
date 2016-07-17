@@ -1,4 +1,4 @@
-/*function timeDrive(step,rpm){
+function timeDrive(step,rpm){
   this.step = step;
   this.rpm = rpm;
   this.start = function(){
@@ -8,15 +8,15 @@
     clearInterval(this.context);
   };
 }
-
+/*
 function makeToggle(){
   var count = 0;
   var toggle = function(){
     count++ %= 2;
     if (count == 0){
-      colorGreen();
+      colorGreen("message");
     } else {
-      colorRed();
+      colorRed("message");
     }
   };
   return toggle;
