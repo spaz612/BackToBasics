@@ -8,9 +8,9 @@ function colorRed(){
 
 function displayKeypress(code){
   $("#message").text("Display: " + code);
-  var c=document.getElementById("monitor");
+  var c=$("#monitor");
   var ctx=c.getContext("2d");
-  ctx.fillRect(20,20,150,100);
+  ctx.fillRect(20,20,150,200);
 //  var ctx = $("#monitor").getContext("2d");
 //  ctx.font = "30px Arial";
 //  ctx.fillText("Code: " + code,80,60);
