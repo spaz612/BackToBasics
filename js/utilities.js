@@ -28,6 +28,7 @@ $(document).ready(function(){
   $(document).keyup(colorRed);
   $(document).keypress(function(event){
      $("#message").text(event.which);
+     displayKeypress(event.which);
   });
 //  loadXML();
 });
