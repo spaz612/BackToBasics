@@ -7,6 +7,7 @@ function colorRed(){
 }
 
 function displayKeypress(code){
+  $("#message").text("Display" + code);
   var ctx = $("#monitor").getContext("2d");
   ctx.font = "30px Arial";
   ctx.fillText(code,80,60);
@@ -27,7 +28,6 @@ $(document).ready(function(){
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
   $(document).keypress(function(event){
-     $("#message").text(event.which);
      displayKeypress(event.which);
   });
 //  loadXML();
