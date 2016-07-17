@@ -51,12 +51,12 @@ function loadXML(){
 }
 
 $(document).ready(function(){
-//  var drive = new timeDrive(makeToggle(),2);
+  var drive = new timeDrive(makeToggle(),2);
   $(document).keydown(function(){colorGreen("dpad-touch-target");});
   $(document).keyup(function(){colorRed("dpad-touch-target");});
   $(document).keypress(function(event){
      displayKeypress(event.which);
   });
   loadXML();
-//  drive.start();
+  drive.start();
 });
