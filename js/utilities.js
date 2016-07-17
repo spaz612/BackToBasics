@@ -27,7 +27,7 @@ $(document).ready(function(){
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
   $(document).keypress(function(event){
-     $("#message").text("Does this break?");
+     $("#message").text(event.which);
   });
 //  loadXML();
 });
