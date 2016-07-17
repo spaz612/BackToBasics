@@ -7,7 +7,7 @@ function timeDrive(step,rpm){
   this.halt = function(){
     clearInterval(this.context);
   }
-};
+}
 
 function makeToggle(){
   var count = 0;
@@ -50,12 +50,12 @@ function loadXML(){
 }
 
 $(document).ready(function(){
-  var drive = new timeDrive(makeToggle(),2);
+//  var drive = new timeDrive(makeToggle(),2);
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
   $(document).keypress(function(event){
      displayKeypress(event.which);
   });
   loadXML();
-  drive.start();
+//  drive.start();
 });
