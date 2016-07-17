@@ -1,3 +1,27 @@
+function timeDrive(step,rpm){
+  this.step = step;
+  this.rpm = rpm;
+  this.start = function(){
+    this.context = setInterval(this.step,1000/this.rpm);
+  };
+  this.halt = function(){
+    clearInterval(this.context);
+  }
+};
+
+function makeToggle(){
+  var count = 0;
+  function toggle(){
+    count++ %= 2;
+    if (count == 0){
+      colorGreen();
+    } else {
+      colorRed();
+    }
+  }
+  return toggle;
+}
+
 function colorGreen(){
   $("#dpad-touch-target").css("background-color", "green");
 }
@@ -18,7 +42,9 @@ function loadXML(){
 }
 
 $(document).ready(function(){
+  var drive = new timeDrive(makeToggle(),2);
   $(document).keydown(colorGreen);
   $(document).keyup(colorRed);
   loadXML();
+  drive.start();
 });
