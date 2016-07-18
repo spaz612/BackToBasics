@@ -84,6 +84,7 @@ $(document).ready(function(){
 //  var painter = new paintDriver(5);
 //  var drive = new timeDrive(painter.paintFrame,2);
   $(document).keydown(function(){
+    alert("Keydown Event");
     displayKey(event.which);
 //    painter.changeImage(event.which);
   });
