@@ -30,7 +30,6 @@ function paintDriver(speed){
     var sprites = document.getElementById("front-sprite");
     cfx.fillStyle = "#FFFFFF";
     cfx.fillRect(0,0,640,480);
-    alert("Erased");
     this.xVal += run;
     if(this.xVal >= 640){
       run = -run;
