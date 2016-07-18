@@ -30,15 +30,12 @@ function paintDriver(speed){
     var sprites = document.getElementById("front-sprite");
     cfx.fillStyle = "#FFFFFF";
     cfx.fillRect(0,0,640,480);
-    alert("erased");
     this.xVal = this.xVal + run;
-    alert("x");
     if(this.xVal >= 640){
       run = -run;
       this.xVal = 640 - (this.xVal - 639);
     }
     this.yVal += rise;
-    alert("y");
     if(this.yVal >= 480){
       rise = -rise;
       this.yVal = 480 - (this.yVal - 479);
