@@ -26,22 +26,26 @@ function paintDriver(speed){
     this.currentImage = newImage;
   };
   this.paintFrame = function(){
+    var cfx = document.getElementById("sprite-layer").getContext("2d");
+    var sprites = document.getElementById("front-sprite");
+    var xSpot = this.xVal;
+    var ySpot = this.yVal;
+    var runVal = this.run;
+    var riseVal = this.rise;
     var paint = function(){
-      var cfx = document.getElementById("sprite-layer").getContext("2d");
-      var sprites = document.getElementById("front-sprite");
       cfx.fillStyle = "#FFFFFF";
       cfx.fillRect(0,0,640,480);
-      this.xVal = this.xVal + this.run;
-      if(this.xVal >= 640){
-        this.run = -this.run;
-        this.xVal = 640 - (this.xVal - 639);
+      xSpot += runVal;
+      if(xSpot >= 640){
+        runVal = -runVal;
+        xSpot = 640 - (xSpot - 639);
       }
-      this.yVal += this.rise;
-      if(this.yVal >= 480){
-        this.rise = -this.rise;
-        this.yVal = 480 - (this.yVal - 479);
+      ySpot += riseVal;
+      if(ySpot >= 480){
+        riseVal = -riseVal;
+        ySpot = 480 - (ySpot - 479);
       }
-      cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
+      cfx.drawImage(sprites,0,0,64,64,xSpot,ySpot,64,64);
     };
     return paint;
   };
