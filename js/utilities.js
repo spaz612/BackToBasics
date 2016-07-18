@@ -3,13 +3,13 @@ function timeDrive(step,rpm){
   this.rpm = rpm;
   this.running = false;
   this.start = function(){
-    if (!running) {
+    if (!this.running) {
       running = true;
       this.context = setInterval(this.step,1000/this.rpm);
     }
   };
   this.halt = function(){
-    if (running){
+    if (this.running){
       running = false;
       clearInterval(this.context);
     }
