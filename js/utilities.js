@@ -31,11 +31,13 @@ function paintDriver(speed){
     cfx.fillStyle = "#FFFFFF";
     cfx.fillRect(0,0,640,480);
     this.xVal += run;
+    alert("x");
     if(this.xVal >= 640){
       run = -run;
       this.xVal = 640 - (this.xVal - 639);
     }
     this.yVal += rise;
+    alert("y");
     if(this.yVal >= 480){
       rise = -rise;
       this.yVal = 480 - (this.yVal - 479);
