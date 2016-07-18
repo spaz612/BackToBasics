@@ -1,4 +1,4 @@
-/*function timeDrive(step,rpm){
+function timeDrive(step,rpm){
   this.step = step;
   this.rpm = rpm;
   this.running = false;
@@ -15,7 +15,7 @@
     }
   };
 }
-
+/*
 function paintDriver(speed){
   this.run = 4*speed;
   this.rise = 3*speed;
