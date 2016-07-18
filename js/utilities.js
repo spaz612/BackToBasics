@@ -1,4 +1,4 @@
-function timeDrive(step,rpm){
+/*function timeDrive(step,rpm){
   this.step = step;
   this.rpm = rpm;
   this.running = false;
@@ -15,7 +15,7 @@ function timeDrive(step,rpm){
     }
   };
 }
-/*
+
 function paintDriver(speed){
   this.run = 4*speed;
   this.rise = 3*speed;
@@ -80,7 +80,7 @@ function loadXML(){
   xmlhttp.send();
 }
 
-$(window).load(function(){
+$(document).ready(function(){
 //  var painter = new paintDriver(5);
 //  var drive = new timeDrive(painter.paintFrame,2);
   $(document).keydown(function(){
