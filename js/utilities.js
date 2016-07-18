@@ -36,17 +36,17 @@ function paintDriver(speed){
       cfx.fillStyle = "#FFFFFF";
       cfx.fillRect(0,0,640,480);
       xSpot += runVal;
-      if(xSpot >= 640){
+      if(xSpot >= 576){
         runVal = -runVal;
-        xSpot = 640 - (xSpot - 639);
+        xSpot = 576 - (xSpot - 575);
       } else if (xSpot < 0){
         runVal = -runVal;
         xSpot = -xSpot;
       }
       ySpot += riseVal;
-      if(ySpot >= 480){
+      if(ySpot >= 416){
         riseVal = -riseVal;
-        ySpot = 480 - (ySpot - 479);
+        ySpot = 416 - (ySpot - 415);
       } else if (ySpot < 0){
         riseVal = -riseVal;
         ySpot = -ySpot;
