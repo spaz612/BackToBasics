@@ -27,7 +27,7 @@ function paintDriver(speed){
   };
   this.paintFrame = function(){
     var cfx = document.getElementById("sprite-layer").getContext("2d");
-    var sprites = document.getElementById("front-sprite");
+    var sprites = document.getElementById("back-sprite");
     var xSpot = this.xVal;
     var ySpot = this.yVal;
     var runVal = this.run;
