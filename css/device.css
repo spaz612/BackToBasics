@@ -1,3 +1,7 @@
+.image-lib {
+    display: none;
+}
+
 #display {
     position: relative;
     margin: auto;
