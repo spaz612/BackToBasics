@@ -26,23 +26,26 @@ function paintDriver(speed){
     this.currentImage = newImage;
   };
   this.paintFrame = function(){
-    var cfx = document.getElementById("sprite-layer").getContext("2d");
-    var sprites = document.getElementById("front-sprite");
-    cfx.fillStyle = "#FFFFFF";
-    cfx.fillRect(0,0,640,480);
-    this.xVal = this.xVal + this.run;
-    if(this.xVal >= 640){
-      run = -run;
-      this.xVal = 640 - (this.xVal - 639);
-    }
-    this.yVal += this.rise;
-    if(this.yVal >= 480){
-      rise = -rise;
-      this.yVal = 480 - (this.yVal - 479);
-    }
-    alert("Ready to draw (sprite,x,y):" + this.currentImage + ", " + this.xVal + ", " + this.yVal);
-    cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
-    alert("Already drawn");
+    var paint = function(){
+      var cfx = document.getElementById("sprite-layer").getContext("2d");
+      var sprites = document.getElementById("front-sprite");
+      cfx.fillStyle = "#FFFFFF";
+      cfx.fillRect(0,0,640,480);
+      this.xVal = this.xVal + this.run;
+      if(this.xVal >= 640){
+        run = -run;
+        this.xVal = 640 - (this.xVal - 639);
+      }
+      this.yVal += this.rise;
+      if(this.yVal >= 480){
+        rise = -rise;
+        this.yVal = 480 - (this.yVal - 479);
+      }
+      alert("Ready to draw (sprite,x,y):" + this.currentImage + ", " + this.xVal + ", " + this.yVal);
+      cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
+      alert("Already drawn");
+    };
+    return paint;
   };
 }
 /*
@@ -84,7 +87,7 @@ function loadXML(){
 
 $(document).ready(function(){
   var painter = new paintDriver(5);
-  var drive = new timeDrive(painter.paintFrame,2);
+  var drive = new timeDrive(painter.paintFrame(),2);
   $(document).keydown(function(event){
     displayKey(event.which);
     painter.changeImage(event.which);
