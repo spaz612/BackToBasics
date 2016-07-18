@@ -16,6 +16,34 @@ function timeDrive(step,rpm){
   };
 }
 
+function paintDriver(speed){
+  this.run = 4*speed;
+  this.rise = 3*speed;
+  this.currentImage = 1;
+  this.xVal = 240;
+  this.yVal = 80;
+  this.changeImage = function(newImage){
+    this.currentImage = newImage;
+  };
+  this.paintFrame = function(){
+    var cfx = document.getElementById("sprite-layer").getContext("2d");
+    var sprites = document.getElementById("front-sprite");
+    cfx.fillStyle = "#FFFFFF";
+    cfx.fillRect(0,0,640,480);
+    this.xVal += run;
+    if(this.xVal >= 640){
+      run = -run;
+      this.xVal = 640 - (this.xVal - 639);
+    }
+    this.yVal += rise;
+    if(this.yVal >= 480){
+      rise = -rise;
+      this.yVal = 480 - (this.yVal - 479);
+    }
+    cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
+  };
+}
+/*
 function makeToggle(){
   var green = true;
   var toggle = function(){
@@ -35,14 +63,10 @@ function colorGreen(target){
 
 function colorRed(target){
   $("#" + target).css("background-color", "red");
-}
+}*/
 
-function displayKeypress(code){
+function displayKey(code){
   $("#message").text("Display: " + code);
-  var ctx=document.getElementById("monitor").getContext("2d");
-//  var ctx = $("#monitor").getContext("2d");
-  ctx.font = "30px Arial";
-  ctx.fillText("Code: " + code,80,60);
 }
 
 function loadXML(){
@@ -56,18 +80,12 @@ function loadXML(){
   xmlhttp.send();
 }
 
-$(document).ready(function(){
-  var drive = new timeDrive(makeToggle(),2);
+$(window).load(function(){
+  var painter = new paintDriver(5);
+  var drive = new timeDrive(painter.paintFrame,2);
   $(document).keydown(function(){
-    colorGreen("dpad-touch-target");
-    drive.halt();
-  });
-  $(document).keyup(function(){
-    colorRed("dpad-touch-target");
-    drive.start();
-  });
-  $(document).keypress(function(event){
-     displayKeypress(event.which);
+    displayKey(event.which);
+    painter.changeImage(event.which);
   });
   loadXML();
   drive.start();
