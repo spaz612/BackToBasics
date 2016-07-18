@@ -15,7 +15,7 @@ function timeDrive(step,rpm){
     }
   };
 }
-/*
+
 function paintDriver(speed){
   this.run = 4*speed;
   this.rise = 3*speed;
@@ -43,7 +43,7 @@ function paintDriver(speed){
     cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
   };
 }
-
+/*
 function makeToggle(){
   var green = true;
   var toggle = function(){
