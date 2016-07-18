@@ -58,7 +58,7 @@ function loadXML(){
 
 $(document).ready(function(){
   var drive = new timeDrive(makeToggle(),2);
-  $(document).keydown(function()
+  $(document).keydown(function(){
     colorGreen("dpad-touch-target");
     drive.halt();
   });
