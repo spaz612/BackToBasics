@@ -17,8 +17,8 @@ function timeDrive(step,rpm){
 }
 
 function paintDriver(speed){
-  this.run = 4*speed;
-  this.rise = 3*speed;
+  this.run = speed;
+  this.rise = speed;
   this.currentImage = 1;
   this.xVal = 240;
   this.yVal = 80;
