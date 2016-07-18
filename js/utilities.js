@@ -81,13 +81,13 @@ function loadXML(){
 }
 
 $(document).ready(function(){
-//  var painter = new paintDriver(5);
-//  var drive = new timeDrive(painter.paintFrame,2);
+  var painter = new paintDriver(5);
+  var drive = new timeDrive(painter.paintFrame,2);
   $(document).keydown(function(event){
     alert("Keydown Event");
     displayKey(event.which);
-//    painter.changeImage(event.which);
+    painter.changeImage(event.which);
   });
   loadXML();
-//  drive.start();
+  drive.start();
 });
