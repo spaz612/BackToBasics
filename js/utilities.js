@@ -39,11 +39,17 @@ function paintDriver(speed){
       if(xSpot >= 640){
         runVal = -runVal;
         xSpot = 640 - (xSpot - 639);
+      } else if (xSpot < 0){
+        runVal = -runVal;
+        xSpot = -xSpot;
       }
       ySpot += riseVal;
       if(ySpot >= 480){
         riseVal = -riseVal;
         ySpot = 480 - (ySpot - 479);
+      } else if (ySpot < 0){
+        riseVal = -riseVal;
+        ySpot = -ySpot;
       }
       cfx.drawImage(sprites,0,0,64,64,xSpot,ySpot,64,64);
     };
@@ -89,7 +95,7 @@ function loadXML(){
 
 $(document).ready(function(){
   var painter = new paintDriver(5);
-  var drive = new timeDrive(painter.paintFrame(),2);
+  var drive = new timeDrive(painter.paintFrame(),50);
   $(document).keydown(function(event){
     displayKey(event.which);
     painter.changeImage(event.which);
