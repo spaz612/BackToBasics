@@ -15,7 +15,7 @@ function timeDrive(step,rpm){
     }
   };
 }
-
+/*
 function paintDriver(speed){
   this.run = 4*speed;
   this.rise = 3*speed;
@@ -43,7 +43,7 @@ function paintDriver(speed){
     cfx.drawImage(sprites,((this.currentImage-1)%16)*64,Math.floor((this.currentImage-1)/16),64,64,this.xVal,this.yVal,64,64);
   };
 }
-/*
+
 function makeToggle(){
   var green = true;
   var toggle = function(){
@@ -81,12 +81,12 @@ function loadXML(){
 }
 
 $(window).load(function(){
-  var painter = new paintDriver(5);
-  var drive = new timeDrive(painter.paintFrame,2);
+//  var painter = new paintDriver(5);
+//  var drive = new timeDrive(painter.paintFrame,2);
   $(document).keydown(function(){
     displayKey(event.which);
-    painter.changeImage(event.which);
+//    painter.changeImage(event.which);
   });
   loadXML();
-  drive.start();
+//  drive.start();
 });
